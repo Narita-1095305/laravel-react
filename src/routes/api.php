@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\PostController;
 */
 Route::group(['middleware' => 'api'], function(){
     Route::get('posts', [PostController::class, 'index']);
+    Route::post('posts/create', [PostController::class, 'create']);
 });
 
 
