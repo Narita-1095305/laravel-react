@@ -18,6 +18,9 @@ use App\Http\Controllers\Api\PostController;
 Route::group(['middleware' => 'api'], function(){
     Route::get('posts', [PostController::class, 'index']);
     Route::post('posts/create', [PostController::class, 'create']);
+    Route::post('edit', [PostController::class, 'edit']);
+    Route::post('update', [PostController::class, 'update']);
+    Route::post('delete', [PostController::class, 'delete']);
 });
 
 
